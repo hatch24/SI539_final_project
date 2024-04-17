@@ -23,14 +23,14 @@
     <main id="main">
         <div>
             <div class="record">
-                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div id="div1" class="target" ondrop="drop(event)" ondragover="allowDrop(event)">
                 </div>
 
-                <img id="drag1" src="../images/record1.png" draggable="true" ondragstart="drag(event)" width="200" height="200">
+                <img id="drag1" class="source1" src="../images/record1.png" draggable="true" ondragstart="drag(event)" width="200" height="200">
 
-                <img id="drag2" src="../images/record2.png" draggable="true" ondragstart="drag(event)" width="200" height="200">
+                <img id="drag2" class="source2" src="../images/record2.png" draggable="true" ondragstart="drag(event)" width="200" height="200">
 
-                <img id="drag3" src="../images/record3.png" draggable="true" ondragstart="drag(event)" width="200" height="200">
+                <img id="drag3" class="source3" src="../images/record3.png" draggable="true" ondragstart="drag(event)" width="200" height="200">
             </div>
         </div>
 
@@ -39,6 +39,20 @@
     <footer>
         <p>Naomi Hatch &copy; 2024</p>
     </footer>
-    <script src="../js/minigame.js"></script>
+    <script>
+        function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+    </script>
 </body>
 </html>

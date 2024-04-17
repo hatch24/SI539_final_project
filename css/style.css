@@ -148,7 +148,7 @@ p{
 
 .record > div {
   background-color: burlywood;
-  background-image: url("/images/bookshelf.png");
+  background-image: url("../images/bookshelf.png");
   height: 800px;
   width: 400px;
   grid-column: 2 / span 2;
