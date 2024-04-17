@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+    <title>MINI GAME</title>
+</head>
+<body>
+    <a href="#main" class="skip">Skip to Main Content</a>
+    <header>
+        <nav>
+            <ul class="header">
+                <li class="button"><a href = "index.html">WHAT IS A SAMPLE?</a></li>
+                <li class="active"><a href = "minigame.html">CLEANUP MINI GAME</a></li>
+                <li class="button"><a href = "top100.html">SPOT THAT SAMPLE</a></li>
+            </ul>
+        </nav>
+        <h1>CLEAN UP CLEAN UP EVERYBODY EVERYWHERE</h1>
+    </header>
+    <main id="main">
+        <div>
+            <div class="record">
+                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                </div>
+
+                <img id="drag1" src="/images/record1.png" draggable="true" ondragstart="drag(event)" width="200" height="200">
+
+                <img id="drag2" src="/images/record2.png" draggable="true" ondragstart="drag(event)" width="200" height="200">
+
+                <img id="drag3" src="/images/record3.png" draggable="true" ondragstart="drag(event)" width="200" height="200">
+            </div>
+        </div>
+
+
+    </main>
+    <footer>
+        <p>Naomi Hatch &copy; 2024</p>
+    </footer>
+    <script src="../js/minigame.js"></script>
+</body>
+</html>

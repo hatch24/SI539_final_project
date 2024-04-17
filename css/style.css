@@ -1,0 +1,212 @@
+/* functioning skip to main, will appear in top left corner of screen when user hits tab*/
+
+.skip {
+    color: #ffffff;
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    background-color: black;
+  }
+  .skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: black;
+  }
+
+  /* styling of boody: add general text info and defautlt ackground color + ackground image */
+body{
+    margin:5px;
+    padding:5px;
+    line-height:1.15;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FF4A97;
+    background-image: url("..//images/pinkbgsmall.png");
+}
+
+/* make all titles bold*/
+h1,h2, h3{
+    font-weight: bold;
+ }
+/* make h1 have blue chaground psanning, text big and bold and text white*/
+ h1{
+   font-size: x-large;
+   font-weight: bolder;
+   text-align: center;
+   background-color: darkblue;
+   color: #ffffff;
+   padding: 20px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+ }
+ /* make h2 have centered text and more padding*/
+ h2{
+    padding: 5px;
+    text-align: center;
+ }
+/* stylke hearder to make sure navigation is displayed in a grid (use grid for media queris later)*/
+.header{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5%;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+    margin: 5%;
+}
+
+/* add change in styling for the active button make it yellow italic and text bolder*/
+.active{
+    border: solid yellow 5px;
+    border-radius: 15px;
+    background-color: yellow;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-style: oblique;
+}
+
+/* default styling for button: white button */
+.button{
+    border: solid #ffffff 5px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: center;
+
+}
+/*center text content on footer */
+footer{
+    text-align: center;
+}
+/* make all paragraph text centered*/
+p{
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+}
+
+/*style samplegroups to be a grid for future media quieries */
+.samplegroups{
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 5px;
+  grid-gap: 15px;
+}
+
+/*make all samples be on white background*/
+.sample {
+  background-color: #ffffff;
+  border: #ffffff solid 5px;
+  border-radius: 15px;
+}
+
+/* grid setup fro intro elemnts for future styling in media queries*/
+.introbox {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+/*make intro box yeallo and text black */
+.intro{
+  background-color: yellow;
+  border: yellow solid 5px;
+  border-radius: 15px;
+  color: black;
+  grid-column: 2;
+}
+/*make spot sample elements have a blue background with white text*/
+.spotsample {
+  background-color: darkblue;
+  border: darkblue solid 5px;
+  border-radius: 15px;
+  color: #ffffff;
+}
+/*set up grid for future media queires */
+.spotthatsample {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 5px;
+  grid-gap: 15px;
+}
+
+/* style the  record class to make styling for minigame*/
+.record{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5px;
+  grid-gap: 15px;
+}
+
+/*styling for the minigame - make records fit on bookshelf in minigame view - add background image for bookshelf - make grid to have items align correctly*/
+.record > img{
+  justify-content: center;
+  align-items: center;
+}
+
+.record > div {
+  background-color: burlywood;
+  background-image: url("/images/bookshelf.png");
+  height: 800px;
+  width: 400px;
+  grid-column: 2 / span 2;
+  grid-row: 1 / span 4;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+
+
+/*make tablet view */
+@media screen and (min-width: 750px) {
+  /*update samplegroups to be two colums in tablet view */
+  .samplegroups{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  /*update header to make nav butttons side by side*/
+  .header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5%;
+
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+    margin: 5%;
+}
+  /*update spotthatsample to be two colums in tablet view */
+.spotthatsample {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+  /*update intro for tablet view */
+.introbox {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+}
+}
+/*make desktop view */
+@media screen and (min-width: 1200px) {
+  /*update samplegroups to be three colums in web view */
+  .samplegroups{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  /*update spotthatsample to be two colums in web view - make billboad take up 2/3 white sample info on Like that be 1/3 */
+  .spotthatsample {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+    /*update intro fro web view */
+  .introbox {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+}
