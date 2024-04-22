@@ -161,6 +161,12 @@ p{
 }
 
 
+iframe {
+  border: 0px ;
+  border-radius:12px
+}
+
+
 
 /*make tablet view */
 @media screen and (min-width: 750px) {
