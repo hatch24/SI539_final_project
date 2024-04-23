@@ -166,6 +166,43 @@ iframe {
   border-radius:12px
 }
 
+.games{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+.minigame{
+  background-color: #ffffff;
+  border: #ffffff solid 5px;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.minigame > .options{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+.minigame > .options > button{
+  width: 200px;
+  height: 100px;
+  color: white;
+  background-color: darkblue;
+  border: 0px;
+  border-radius: 15px;
+}
+
+#mute{
+  width: 200px;
+  height: 100px;
+  color: white;
+  background-color: darkblue;
+  border: 0px;
+  border-radius: 15px;
+}
+
 
 
 /*make tablet view */
@@ -214,5 +251,10 @@ iframe {
   .introbox {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
+  }
+  .games{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
   }
 }

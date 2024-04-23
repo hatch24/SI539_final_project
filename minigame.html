@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="..//images/favicon.png">
     <title>MINI GAME</title>
 </head>
 <body>
@@ -21,38 +21,51 @@
         <h1>CLEAN UP CLEAN UP EVERYBODY EVERYWHERE</h1>
     </header>
     <main id="main">
-        <div>
+        <div class="games">
+        <div class="minigame">
+            <h2>Put the Records on the Shelf</h2>
             <div class="record">
                 <div id="div1" class="target" ondrop="drop(event)" ondragover="allowDrop(event)">
                 </div>
 
-                <img id="drag1" class="source1" src="../images/record1.png" draggable="true" ondragstart="drag(event)" width="200" height="200" alt="Cartoon record cover that is blue with a image of a record and music notes on it">
+                <img id="drag1" class="source1" src="images/record1.png" draggable="true" ondragstart="drag(event)" width="200" height="200" alt="Cartoon record cover that is blue with a image of a record and music notes on it">
 
-                <img id="drag2" class="source2" src="../images/record2.png" draggable="true" ondragstart="drag(event)" width="200" height="200" alt="Cartoon record cover that is dake blue with sound wave design on it">
+                <img id="drag2" class="source2" src="/images/record2.png" draggable="true" ondragstart="drag(event)" width="200" height="200" alt="Cartoon record cover that is dake blue with sound wave design on it">
 
-                <img id="drag3" class="source3" src="../images/record3.png" draggable="true" ondragstart="drag(event)" width="200" height="200" alt="Cartoon record cover that is lightpink with sheet music and a micrphone graphic">
+                <img id="drag3" class="source3" src="//images/record3.png" draggable="true" ondragstart="drag(event)" width="200" height="200" alt="Cartoon record cover that is lightpink with sheet music and a micrphone graphic">
             </div>
         </div>
-
-
+        <div class="minigame">
+            <h2>Headline Here and Mix Some Beats</h2>
+            <figure>
+                <video class = "video"
+                    autoplay="false"
+                    width="640"
+                    height="360"
+                    id="player1"
+                    preload="none"
+                    src="/images/djmusic.mp4">
+                </video>
+                <figcaption>[DJ Music Mixing Booth]</figcaption>
+                </figure>
+                <div class = "options">
+                    <button  id = "play">DJ START IT UP</button>
+                    <button  id = "pause">SCREECH TAKE A PAUSE</button>
+                    <button  id = "slower">SLOW IT DOWN NOW</button>
+                    <button  id = "faster">PICK UP THE PACE</button>
+                    <button  id = "skip">JUMP AHEAD NOW</button>
+                    <button id="mute">SILENCE</button><br>
+                </div>
+                <label for="slider">Volume</label>: 0 <input type="range" id="slider" min="0" max="100" value="100" step="10"> 100%<br>
+            <div>Volume is: <span id = "volume"> </span><br><br></div>
+        </div>
+    </div>
     </main>
     <footer>
         <p>Naomi Hatch &copy; 2024</p>
     </footer>
-    <script>
-        function allowDrop(ev) {
-  ev.preventDefault();
-}
 
-function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-  ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
-}
-    </script>
+    <script src="js/minigame.js"></script>
+    <script src="js/minigametwo.js"></script>
 </body>
 </html>
